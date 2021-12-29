@@ -1,23 +1,26 @@
 import { useState, useEffect } from 'react';
 import './App.css';
+import { useSessionStorage } from './hooks/useSessionStorage';
 
-function getSessionStorageOrDefault(key, defaultValue) {
-  const stored = sessionStorage.getItem(key);
-  if(!stored) {
-    return defaultValue;
-  }
-  return JSON.parse(stored);
-}
+//moved to useSessionStorage.js
+//function getSessionStorageOrDefault(key, defaultValue) {
+ // const stored = sessionStorage.getItem(key);
+//  if(!stored) {
+ //   return defaultValue;
+ // }
+ // return JSON.parse(stored);
+//}
 
 function App() {
 
   const [termsAccepted, setTermsAccepted] = useState(
-    getSessionStorageOrDefault('terms',false)
+    useSessionStorage('terms',false)
   );
 
-  useEffect(() => {
-    sessionStorage.setItem('terms', JSON.stringify(termsAccepted));
-  }, [termsAccepted]);
+//moved to useSessionStorage.js
+ // useEffect(() => {
+ //   sessionStorage.setItem('terms', JSON.stringify(termsAccepted));
+ // }, [termsAccepted]);
 
 
   if (!termsAccepted) {
