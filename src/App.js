@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 
 function getSessionStorageOrDefault(key, defaultValue) {
@@ -15,7 +15,11 @@ function App() {
     getSessionStorageOrDefault('terms',false)
   );
 
-  
+  useEffect(() => {
+    sessionStorage.setItem('terms', JSON.stringify(termsAccepted));
+  }, [termsAccepted]);
+
+
   if (!termsAccepted) {
     return (
       <>
