@@ -1,24 +1,45 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import { useSessionStorage } from './hooks/useSessionStorage';
+
+//moved to useSessionStorage.js
+//function getSessionStorageOrDefault(key, defaultValue) {
+ // const stored = sessionStorage.getItem(key);
+//  if(!stored) {
+ //   return defaultValue;
+ // }
+ // return JSON.parse(stored);
+//}
 
 function App() {
+
+  const [termsAccepted, setTermsAccepted] = useState(
+    useSessionStorage('terms',false)
+  );
+
+//moved to useSessionStorage.js
+ // useEffect(() => {
+ //   sessionStorage.setItem('terms', JSON.stringify(termsAccepted));
+ // }, [termsAccepted]);
+
+
+  if (!termsAccepted) {
+    return (
+      <>
+      <h1>Terms of Service</h1>
+      <p>These are the terms for using the application.</p>
+      <button
+      onClick={() => {
+        setTermsAccepted(true);
+      }}
+      >
+        I accept
+      </button>
+      </>
+    );
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div>This is the application</div>
   );
 }
 
