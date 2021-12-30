@@ -1,0 +1,28 @@
+import React from 'react';
+
+function Home() {
+
+    const [termsAccepted, setTermsAccepted] = useState(
+        useSessionStorage('terms', false)
+    );
+    if (!termsAccepted) {
+        return (
+            <>
+                <h1>Terms of Service</h1>
+                <p>These are the terms for using the application.</p>
+                <button
+                    onClick={() => {
+                        setTermsAccepted(true);
+                    }}
+                >
+                    I accept
+                </button>
+            </>
+        );
+
+    }
+
+    return (
+
+    )
+}
