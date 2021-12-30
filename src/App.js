@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <div>This is the application</div>
+
       <Switch>
 
         <Route exact path="/Home">
