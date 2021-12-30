@@ -3,6 +3,7 @@ import './App.css';
 import { useSessionStorage } from './hooks/useSessionStorage';
 import { Switch, Route } from 'react-router-dom';
 import Registration from './components/Users/Registration';
+import Home from './components/Home';
 
 //moved to useSessionStorage.js
 //function getSessionStorageOrDefault(key, defaultValue) {
@@ -45,8 +46,11 @@ function App() {
       <div>This is the application</div>
       <Switch>
 
-        <Route exact path="/">
+        <Route exact path="/Home">
           <Home />
+        </Route>
+        <Route exact path="/Registration">
+          <Registration />
         </Route>
 
 

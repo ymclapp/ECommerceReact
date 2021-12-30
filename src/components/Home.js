@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useSessionStorage } from '../hooks/useSessionStorage';
 
 function Home() {
 
@@ -23,6 +24,8 @@ function Home() {
     }
 
     return (
-
+        <div>This is the application</div>
     )
 }
+
+export default Home;
