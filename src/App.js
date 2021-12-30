@@ -16,31 +16,32 @@ import Home from './components/Home';
 
 function App() {
 
-  const [termsAccepted, setTermsAccepted] = useState(
-    useSessionStorage('terms', false)
-  );
+  //const [termsAccepted, setTermsAccepted] = useState(
+  //  useSessionStorage('terms', false)
+ // );
 
   //moved to useSessionStorage.js
   // useEffect(() => {
   //   sessionStorage.setItem('terms', JSON.stringify(termsAccepted));
   // }, [termsAccepted]);
 
+//moved to Home.js
+//  if (!termsAccepted) {
+//    return (
+//      <>
+//        <h1>Terms of Service</h1>
+//        <p>These are the terms for using the application.</p>
+ //       <button
+ //         onClick={() => {
+ //           setTermsAccepted(true);
+ //         }}
+ //       >
+ //         I accept
+ //       </button>
+ //     </>
+ //   );
+  //}
 
-  if (!termsAccepted) {
-    return (
-      <>
-        <h1>Terms of Service</h1>
-        <p>These are the terms for using the application.</p>
-        <button
-          onClick={() => {
-            setTermsAccepted(true);
-          }}
-        >
-          I accept
-        </button>
-      </>
-    );
-  }
   return (
     <>
       <div>This is the application</div>
