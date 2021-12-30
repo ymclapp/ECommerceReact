@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
-import { useSessionStorage } from './hooks/useSessionStorage';
+//import { useSessionStorage } from './hooks/useSessionStorage';
 import { Switch, Route } from 'react-router-dom';
 import Registration from './components/Users/Registration';
 import Home from './components/Home';
