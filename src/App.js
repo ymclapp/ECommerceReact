@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 //import { useSessionStorage } from './hooks/useSessionStorage';
-import { Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Switch, Route } from 'react-router-dom';
 import Registration from './components/Users/Registration';
 import Home from './components/Home';
 
@@ -50,6 +50,7 @@ function App() {
         <Route exact path="/Home">
           <Home />
         </Route>
+
         <Route exact path="/Registration">
           <Registration />
         </Route>
