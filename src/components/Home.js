@@ -24,7 +24,7 @@ function Home() {
     }
 
     return (
-        <div>This is the application</div>
+        <div>This is the home page</div>
     )
 }
 
