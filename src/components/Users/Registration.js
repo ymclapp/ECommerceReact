@@ -43,6 +43,16 @@ export default function Registration() {
                     <Form.Label>Email:</Form.Label>
                     <Form.Control name="email" type="email" placeholder="jane@example.com" />
                 </Form.Group>
+                
+                <Form.Group className="mb-3" controlId="form.first_name">
+                    <Form.Label>First Name:</Form.Label>
+                    <Form.Control name="first_name" />
+                </Form.Group>
+                
+                <Form.Group className="mb-3" controlId="form.last_name">
+                    <Form.Label>Last Name:</Form.Label>
+                    <Form.Control name="last_name" />
+                </Form.Group>
 
                 <Form.Group className="mb-3" controlId="form.username">
                     <Form.Label>Username:</Form.Label>
