@@ -5,7 +5,7 @@ import { BrowserRouter as Switch, Route, Link } from 'react-router-dom';
 import Registration from './components/Users/Registration';
 
 import Home from './components/Home';
-import AddTutorial from './components/Tutorial/AddTutorial';
+import AddTutorial from './components/AddTutorial';
 import Tutorial from './components/Tutorial/Tutorial';
 import TutorialsList from './components/Tutorial/TutorialsList';
 
