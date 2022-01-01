@@ -1,3 +1,6 @@
+###  Summary:
+This is the React front end to the ECommerceBackEnd.
+
 ###  Referenced:
 1.  https://typeofnan.dev/using-session-storage-in-react-with-hooks/
 
