@@ -1,13 +1,13 @@
 import React from 'react';
-import "bootstrap/dist/css/bootstrap.min.css";
+//import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
 import { BrowserRouter as Switch, Route, Link } from 'react-router-dom';
 import Registration from './components/Users/Registration';
 
 import Home from './components/Home';
 import AddTutorial from './components/AddTutorial';
-import Tutorial from './components/Tutorial/Tutorial';
-import TutorialsList from './components/Tutorial/TutorialsList';
+import Tutorial from './components/Tutorial';
+import TutorialsList from './components/TutorialsList';
 
 function App() {
 
