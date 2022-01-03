@@ -2,8 +2,6 @@ import React from 'react';
 import { Form, Button } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
 
-const userApi = ''
-
 export default function Registration() {
     const history = useHistory();
 
@@ -20,7 +18,7 @@ export default function Registration() {
         };
         console.log("Submitting....", userRegData);
 
-        const result = await fetch(`${ userApi }/user`, {
+        const result = await fetch(`${ userApi }/test/user`, {
             method:  'post',
             body:  JSON.stringify(userRegData),
             headers:  {

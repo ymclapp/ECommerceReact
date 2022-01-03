@@ -28,7 +28,7 @@ const findByTitle = title => {
     return http.get(`/tutorials?title=${ title }`);
 };
 
-export {
+export default {
     getAll,
     get,
     create,
